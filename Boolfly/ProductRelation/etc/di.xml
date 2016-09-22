@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="Magento\Catalog\Model\Product"
+                type="Boolfly\ProductRelation\Model\Product"/>
+    <preference for="Magento\Catalog\Model\Product\Link"
+                type="Boolfly\ProductRelation\Model\Catalog\Product\Link"/>
+    <preference for="Magento\Catalog\Model\Product\Link\Proxy"
+                type="Boolfly\ProductRelation\Model\Catalog\Product\Link\Proxy"/>
+
+    <type name="Magento\Catalog\Model\Product\Initialization\Helper\ProductLinks">
+        <plugin sortOrder="4" name="afterInitializeLinks"
+                type="Boolfly\ProductRelation\Model\Product\Initialization\Helper\ProductLinks"/>
+    </type>
+</config>
