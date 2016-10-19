@@ -1,7 +1,7 @@
-# Boolfly - Custom Product Relation
+# Magento 2 - Custom Product Relation
 
 
-Magenoto 2 - Adding custom product relations
+Magento 2 - Adding custom product relations
 
 **Note:** Testing on Magento 2.0.x version. May not working on 2.1 or later version. I will update later.
 
