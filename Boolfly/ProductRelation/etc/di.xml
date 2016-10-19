@@ -14,4 +14,8 @@
         <plugin sortOrder="4" name="afterInitializeLinks"
                 type="Boolfly\ProductRelation\Model\Product\Initialization\Helper\ProductLinks"/>
     </type>
+
+    <!--For version 2.1.2-->
+    <preference for="Magento\Catalog\Ui\DataProvider\Product\Form\Modifier\Related"
+                type="Boolfly\ProductRelation\Ui\DataProvider\Product\Form\Modifier\Related"/>
 </config>
