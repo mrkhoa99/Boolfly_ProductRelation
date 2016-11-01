@@ -18,4 +18,20 @@
     <!--For version 2.1.2-->
     <preference for="Magento\Catalog\Ui\DataProvider\Product\Form\Modifier\Related"
                 type="Boolfly\ProductRelation\Ui\DataProvider\Product\Form\Modifier\Related"/>
+
+    <type name="Magento\Catalog\Model\Product\LinkTypeProvider">
+        <arguments>
+            <argument name="linkTypes" xsi:type="array">
+                <item name="customtype" xsi:type="const">Boolfly\ProductRelation\Model\Catalog\Product\Link::LINK_TYPE_CUSTOMTYPE</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Catalog\Model\ProductLink\CollectionProvider">
+        <arguments>
+            <argument name="providers" xsi:type="array">
+                <item name="customtype" xsi:type="object">Boolfly\ProductRelation\Model\Product\Link\CollectionProvider\CustomType</item>
+            </argument>
+        </arguments>
+    </type>
 </config>
