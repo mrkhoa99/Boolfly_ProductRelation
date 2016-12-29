@@ -1,0 +1,17 @@
+{
+    "name": "boolfly/product-relation",
+    "description": "N/A",
+    "require": {
+        "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+    },
+    "type": "magento2-module",
+    "version": "100.0.0",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Boolfly\\ProductRelation\\": ""
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference
+        for="Magento\CatalogImportExport\Model\Import\Product"
+        type="Boolfly\ProductRelation\Model\CatalogImportExport\Import\Product"
+    />
+
+    <preference
+        for="Magento\CatalogImportExport\Model\Export\Product"
+        type="Boolfly\ProductRelation\Model\CatalogImportExport\Export\Product"
+    />
+</config>
