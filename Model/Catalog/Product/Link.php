@@ -26,8 +26,8 @@ class Link extends \Magento\Catalog\Model\Product\Link
         parent::saveProductRelations($product);
 
         $data = $product->getCustomtypeData();
-        if(!is_null($data)) {
-            $this->_getResource()->saveProductLinks($product, $data, self::LINK_TYPE_CUSTOMTYPE);
+        if (!is_null($data)) {
+            $this->_getResource()->saveProductLinks($product->getId(), $data, self::LINK_TYPE_CUSTOMTYPE);
         }
     }
 }
