@@ -9,6 +9,12 @@ class CustomType implements \Magento\Catalog\Model\ProductLink\CollectionProvide
      */
     public function getLinkedProducts(\Magento\Catalog\Model\Product $product)
     {
-        return $product->getCustomTypeProducts();
+        $products = $product->getCustomtypeProducts();
+
+        if (!isset($products)) {
+            return [];
+        }
+
+        return $products;
     }
 }
