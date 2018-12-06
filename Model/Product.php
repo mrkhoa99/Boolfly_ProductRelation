@@ -43,7 +43,13 @@ class Product extends \Magento\Catalog\Model\Product
      */
     public function getCustomTypeProductCollection() 
     {
+        /** @var \Magento\Catalog\Model\ResourceModel\Product\Link\Product\Collection $collection */
         $collection = $this->getLinkInstance()->useCustomtypeLinks()->getProductCollection()->setIsStrongMode();
+        $collection
+            ->addAttributeToSelect('name')
+            ->addAttributeToSelect('thumbnail')
+            ->addAttributeToSelect('price')
+            ->addAttributeToSelect('special_price');
         $collection->setProduct($this);
         return $collection;
     }
